@@ -371,7 +371,7 @@ int main(int argc, char* argv[])
         //开始修改SandMan.exe.sig
         if (!Utils::FileExists(SANDMAN_SIG_BAK)) {
             //备份SandMax.exe.sig
-            if (rename(SANDMAN_SIG, SANDMAN_SIG_BAK) == 0) {
+            if (rename(SANDMAN_SIG, SANDMAN_SIG_BAK) ！= 0) {
 				std::cout << "[!] Warning: Rename " << SANDMAN_SIG << " to " << SANDMAN_SIG_BAK << " failed!" << std::endl;
             }
         }
